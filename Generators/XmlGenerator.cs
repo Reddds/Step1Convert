@@ -10,7 +10,11 @@ namespace Step1Convert.Generators
 {
     class XmlGenerator
     {
+        public const string MoodleNull = "$@NULL@$";
+
         protected XmlDocument XmlDoc;
+
+
 
         /// <summary>
         /// Создаёт XML документ с заданным именем корневого элемента
@@ -30,6 +34,19 @@ namespace Step1Convert.Generators
             XmlDoc.AppendChild(element1);
             return element1;
         }
+
+        protected XmlElement CreateEmptyElement(string elementName)
+        {
+            return XmlDoc.CreateElement(string.Empty, elementName, string.Empty);
+        }
+        protected XmlElement CreateElementWithText(string elementName, string text)
+        {
+            var el = XmlDoc.CreateElement(string.Empty, elementName, string.Empty);
+            el.AppendChild(XmlDoc.CreateTextNode(text));
+            return el;
+
+        }
+
         public string GetXml()
         {
             if (XmlDoc == null)
@@ -38,6 +55,8 @@ namespace Step1Convert.Generators
             {
                 using (var xw = new XmlTextWriter(sw))
                 {
+                    xw.Formatting = Formatting.Indented;
+                    xw.Indentation = 4;
                     XmlDoc.WriteTo(xw);
                 }
                 return sw.ToString();

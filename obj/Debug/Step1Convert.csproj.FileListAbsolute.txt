@@ -20,3 +20,5 @@ D:\Work\Russians\Step1Convert\Step1Convert\obj\Debug\Step1Convert.Properties.Res
 D:\Work\Russians\Step1Convert\Step1Convert\obj\Debug\Step1Convert.csproj.GenerateResource.Cache
 D:\Work\Russians\Step1Convert\Step1Convert\obj\Debug\Step1Convert.exe
 D:\Work\Russians\Step1Convert\Step1Convert\obj\Debug\Step1Convert.pdb
+D:\Work\Russians\Step1Convert\Step1Convert\bin\Debug\DotNetZip.dll
+D:\Work\Russians\Step1Convert\Step1Convert\bin\Debug\DotNetZip.xml

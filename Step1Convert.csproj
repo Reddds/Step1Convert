@@ -36,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RdControls">
       <HintPath>..\..\..\Utils\Components\RdControls\bin\Debug\RdControls.dll</HintPath>
     </Reference>
@@ -67,6 +71,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Generators\Completion.cs" />
+    <Compile Include="Generators\Badges.cs" />
+    <Compile Include="Generators\Course\Blocks\Block.cs" />
+    <Compile Include="Generators\Course\Calendar.cs" />
+    <Compile Include="Generators\Course\Inforef.cs" />
+    <Compile Include="Generators\Course\Filters.cs" />
+    <Compile Include="Generators\Course\Comments.cs" />
+    <Compile Include="Generators\Course\Roles.cs" />
+    <Compile Include="Generators\GradeHistory.cs" />
+    <Compile Include="Generators\Outcomes.cs" />
+    <Compile Include="Generators\Gradebook.cs" />
+    <Compile Include="Generators\Roles.cs" />
+    <Compile Include="Generators\Questions.cs" />
+    <Compile Include="Generators\Groups.cs" />
+    <Compile Include="Generators\Files.cs" />
+    <Compile Include="Generators\Scales.cs" />
+    <Compile Include="Generators\XmlGenerator.cs" />
+    <Compile Include="Generators\Users.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -90,6 +112,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +122,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
