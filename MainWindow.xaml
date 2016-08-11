@@ -1,0 +1,17 @@
+﻿<Window x:Class="Step1Convert.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step1Convert"
+        xmlns:rdControls="clr-namespace:RdControls;assembly=RdControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Label x:Name="label" Content="Путь к папке с &quot;Шаг 1&quot;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <rdControls:FilePicker x:Name="FpPathToStep1"  VerticalAlignment="Top" Margin="162,10,10.4,0" SettingKey="PathToStep1" OpenDirectory="True"></rdControls:FilePicker>
+        <Button Content="Кеонвертировать!" HorizontalAlignment="Left" Height="47" Margin="150,86,0,0" VerticalAlignment="Top" Width="217"/>
+        <Label  Content="Путь к выходному файлу" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <rdControls:FilePicker x:Name="FpPathToOutput"  VerticalAlignment="Top" Margin="162,41,10.4,0" SettingKey="PathToOutput" Filter="Moodle Backup|*.mbz" SaveFile="True"/>
+    </Grid>
+</Window>
